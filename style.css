@@ -82,6 +82,10 @@ section {
     mix-blend-mode: multiply;
 }
 
+.section {
+    height: 100%;
+}
+
 .content {
     padding: 2rem;
     text-align: center;
@@ -132,17 +136,22 @@ section {
     }
     .card {
         flex-direction: row;
+        min-width: 90%;
     }
 
+    .section {
+        height: 100%;
+    }
     
     .content {
         text-align: left;
-        padding: 3rem 1rem 2rem 3rem;
+        padding: 3rem 5rem 2rem 3rem;
+        align-content: space-between;
+        height: 100%;
     }
-
         
     .heading {
-        font-size: 2.3rem;
+        font-size: calc(2.3rem - 4px);
         font-weight: 600;
         color: var(--White);
         padding-bottom: 1.5rem;
