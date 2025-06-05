@@ -29,9 +29,12 @@
 
 
     body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--Very-dark-blue);
     color: var(--White);
-    display: flex;
 }
 
 .wrapper {
@@ -39,7 +42,8 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 4rem 0;
+    max-width: 30rem;
+    margin: 3rem 0;
 }
 
 .card {
@@ -47,7 +51,7 @@
     flex-direction: column-reverse;
     justify-content: start;
     width: 90%;
-    height: 760px;
+    /* height: 760px; */
     background: var(--Dark-desaturated-blue);
     border-radius: 0.5rem;
     overflow: hidden;
@@ -84,8 +88,8 @@ section {
 }
 
 .heading {
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.9rem;
+    font-weight: 600;
     color: var(--White);
     padding-bottom: 1.5rem;
 }
@@ -95,8 +99,9 @@ section {
 }
 
 .desc {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 200;
+    line-height: 1.5rem;
     color: var(--Slightly-transparent-white2);
 }
 
@@ -105,11 +110,72 @@ section {
     padding: 2rem 0;
 }
 
-.templates-summary {
-
+.summary .number-sum {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .summary .name-cum{
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: var(--Slightly-transparent-white2);
+}
+
+
+@media screen and (min-width: 60rem) {
+    body {
+        height: 100vh;
+    }
+    .wrapper {
+        max-width: 71rem;
+    }
+    .card {
+        flex-direction: row;
+    }
+
+    
+    .content {
+        text-align: left;
+        padding: 3rem 1rem 2rem 3rem;
+    }
+
+        
+    .heading {
+        font-size: 2.3rem;
+        font-weight: 600;
+        color: var(--White);
+        padding-bottom: 1.5rem;
+    }
+
+    .desc {
+        font-size: 1rem;
+        font-weight: 200;
+        line-height: 1.5rem;
+        color: var(--Slightly-transparent-white2);
+    }
+
+    .summary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.8rem;
+    }
+
+    .summary div {
+        padding: 0;
+    }
+
+    .summary .number-sum {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .summary .name-cum{
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        color: var(--Slightly-transparent-white2);
+    }
 }
